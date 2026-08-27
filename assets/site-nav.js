@@ -21,7 +21,8 @@
       links: [
         { href: 'index.html', title: 'Home', note: 'The 2013 story and the map of every room.' },
         { href: 'pages/filing-cabinet.html', title: 'The filing cabinet', note: 'All 61 documents from the 2012 collection, as a ledger.' },
-        { href: 'pages/the-method.html', title: 'The method', note: 'The Relevance Ladder: gather, chomp, sort, plan, act.' }
+        { href: 'pages/the-method.html', title: 'The method', note: 'The Relevance Ladder: gather, chomp, sort, plan, act.' },
+        { href: 'pages/site-map.html', title: 'Site map', note: 'Every room on one page, no JavaScript needed.' }
       ]
     },
     {
