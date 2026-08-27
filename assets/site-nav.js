@@ -38,7 +38,7 @@
       blurb: 'Relevance-first: start from your own wallet, not from A.',
       links: [
         { href: 'pages/your-relevance.html', title: 'Your relevance', note: 'Life domains mapped to the acts that touch them.' },
-        { href: 'pages/sort-bench.html', title: 'The sorting bench', note: 'Keep, bites, broken, missing. Dials, not verdicts.' }
+        { href: 'pages/sort-bench.html', title: 'The sorting bench', note: 'Serves, bites, broken, missing. Dials, not verdicts.' }
       ]
     },
     {
