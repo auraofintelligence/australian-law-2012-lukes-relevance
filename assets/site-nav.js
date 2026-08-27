@@ -48,7 +48,8 @@
       links: [
         { href: 'pages/change-the-law.html', title: 'Change the law', note: 'The reform ladder: forms, submissions, members, referendums.' },
         { href: 'pages/gamify-democracy.html', title: 'Gamify democracy', note: 'The rulebook is hidden. Good games publish theirs.' },
-        { href: 'pages/cyber-republic.html', title: 'Cyber republic', note: 'A purple party, a simulator, and a referendum carried before 2032.' }
+        { href: 'pages/cyber-republic.html', title: 'Cyber republic', note: 'A purple party, a simulator, and a referendum carried before 2032.' },
+        { href: 'pages/clocks.html', title: 'The clocks', note: 'What is running: the 2032 countdown and the elections before it.' }
       ]
     },
     {
