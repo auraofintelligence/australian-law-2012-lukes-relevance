@@ -416,6 +416,30 @@ figure.diagram figcaption { font-size: 0.82rem; color: var(--muted); margin-top:
   .countdown { grid-template-columns: 1fr; }
 }
 
+/* ---------- eclipse charts ---------- */
+
+.chart {
+  margin: 1.6rem 0;
+  max-width: 560px;
+}
+.chart a {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius);
+  padding: 0.6rem;
+}
+.chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.chart figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 /* ---------- video: phone frames and centred stage ---------- */
 
 .video-stage {
