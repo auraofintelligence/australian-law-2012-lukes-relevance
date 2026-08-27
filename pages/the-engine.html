@@ -149,7 +149,7 @@
     </figure>
 
     <div class="measure">
-      <p>Two stages deserve a plain-words note. <strong>Acquire</strong> is deliberately engagement first: most registers publish no public interface for bulk access, terms of use vary, and Crown copyright applies to reprints (the official consolidated copies of acts), so the honest path is to ask each Parliamentary Counsel's office for sanctioned access rather than scrape around them. <strong>Embed</strong> uses <span class="gloss" title="A way of turning text into lists of numbers so a computer can compare meanings, not just match words.">embeddings</span> (text turned into numbers so meaning can be compared, not just words matched), and embeddings trained on Australian legal text already exist publicly, which matters because Australian statute reads nothing like everyday prose.</p>
+      <p>Two stages deserve a plain-words note. <strong>Acquire</strong> is deliberately engagement first: most registers publish no public interface for bulk access, terms of use vary, and Crown copyright applies to reprints (the official consolidated copies of acts), so the path is to ask each Parliamentary Counsel's office for sanctioned access rather than scrape around them. <strong>Embed</strong> uses <span class="gloss" title="A way of turning text into lists of numbers so a computer can compare meanings, not just match words.">embeddings</span> (text turned into numbers so meaning can be compared, not just words matched), and embeddings trained on Australian legal text already exist publicly, which matters because Australian statute reads nothing like everyday prose.</p>
       <p>One scope note the design has to carry: "in force" law means assented (formally approved into law) principal and amending acts, including ones made but not yet commenced; bills and repealed law sit outside it; and regulations, the subordinate legislation made under acts, are a second layer the design also needs. The full tour of where all this law lives is next door in <a href="nine-registers.html">nine registers</a>.</p>
     </div>
   </section>
@@ -203,11 +203,12 @@
     <div class="panel accent">
       <h3><span class="stamp ok">Exists</span></h3>
       <ul>
-        <li>The nine registers themselves, publishing consolidated law (each act's current text with its amendments already folded in): start at the <a href="https://www.legislation.gov.au/" rel="noopener">Federal Register of Legislation</a>, and see <a href="nine-registers.html">nine registers</a> for the full list.</li>
-        <li><a href="https://www.austlii.edu.au/" rel="noopener">AustLII</a>, decades of free public access to Australian law.</li>
-        <li>The Isaacus <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-corpus" rel="noopener">Open Australian Legal Corpus</a> and <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-embeddings" rel="noopener">open-australian-legal-embeddings</a>, an open corpus and embeddings trained on Australian legal text.</li>
-        <li>The <a href="https://auraofintelligence.github.io/legal-memory-workbench/" rel="noopener">Legal Memory Workbench</a>, a live static tool for mapping your own side of the table; see <a href="workbench-bridge.html">neighbouring rooms</a>.</li>
+        <li>The nine registers themselves, publishing consolidated law (each act's current text with its amendments already folded in): start at the <a href="https://www.legislation.gov.au/" target="_blank" rel="noopener">Federal Register of Legislation</a>, and see <a href="nine-registers.html">nine registers</a> for the full list.</li>
+        <li><a href="https://www.austlii.edu.au/" target="_blank" rel="noopener">AustLII</a>, decades of free public access to Australian law.</li>
+        <li>The Isaacus <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-corpus" target="_blank" rel="noopener">Open Australian Legal Corpus</a> and <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-embeddings" target="_blank" rel="noopener">open-australian-legal-embeddings</a>, an open corpus and embeddings trained on Australian legal text.</li>
+        <li>The <a href="https://auraofintelligence.github.io/legal-memory-workbench/" target="_blank" rel="noopener">Legal Memory Workbench</a>, a live static tool for mapping your own side of the table; see <a href="workbench-bridge.html">neighbouring rooms</a>.</li>
         <li>The method itself, run by hand: the 2013 read-through happened, and <a href="the-method.html">the method</a> shows how to run yours today.</li>
+        <li>The two 2024-25 research briefs behind this design, archived in this repo as they were written: <a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance/blob/main/reference/building-an-australian-legal-rag-system.md" target="_blank" rel="noopener">an all-Australia statutory blueprint</a> and <a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance/blob/main/reference/legal-rag-llm-plan-aus-qld-redlands.md" target="_blank" rel="noopener">a Federal, Queensland and Redlands three-tier plan</a>. Reference material, not settled decisions.</li>
       </ul>
     </div>
 
@@ -293,7 +294,7 @@
     </div>
     <div class="panel paper">
       <h3>Why the bar is set this high</h3>
-      <p>Australian courts have already dealt with lawyers filing citations invented by AI tools, and in 2025 an Australian lawyer was penalised for exactly that. The failure mode is not hypothetical; it has a case file. That is why grounding and citation are non-negotiable in this design, and why the engine would rather say "I cannot find that" than produce a confident sentence with no section behind it. The full engineering honesty ledger lives in <a href="honesty.html">the honesty chip</a>.</p>
+      <p>Australian courts have already dealt with lawyers filing citations invented by AI tools, and in 2025 an Australian lawyer was penalised for exactly that. The failure mode is not hypothetical; it has a case file. That is why grounding and citation are non-negotiable in this design, and why the engine would rather say "I cannot find that" than produce a confident sentence with no section behind it. The full engineering bar lives in <a href="honesty.html">the honesty chip</a>.</p>
     </div>
   </section>
 

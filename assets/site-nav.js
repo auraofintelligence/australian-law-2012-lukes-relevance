@@ -144,15 +144,15 @@
         s.links.map(l => '<li><a href="' + P + l.href + '">' + esc(l.title) + '</a></li>').join('') +
         '</ul></div>').join('') +
       '<div><h3>Next door</h3><ul>' +
-      '<li><a href="https://auraofintelligence.github.io/legal-memory-workbench/" rel="noopener">Legal Memory Workbench</a></li>' +
-      '<li><a href="https://p4a.xyz/pages/site-map.html" rel="noopener">P4A site map</a></li>' +
-      '<li><a href="https://auraofintelligence.github.io/strange-but-true/" rel="noopener">Strange But True</a></li>' +
-      '<li><a href="https://auraofintelligence.github.io/" rel="noopener">Aura of Intelligence</a></li>' +
+      '<li><a href="https://auraofintelligence.github.io/legal-memory-workbench/" target="_blank" rel="noopener">Legal Memory Workbench</a></li>' +
+      '<li><a href="https://p4a.xyz/pages/site-map.html" target="_blank" rel="noopener">P4A site map</a></li>' +
+      '<li><a href="https://auraofintelligence.github.io/strange-but-true/" target="_blank" rel="noopener">Strange But True</a></li>' +
+      '<li><a href="https://auraofintelligence.github.io/" target="_blank" rel="noopener">Aura of Intelligence</a></li>' +
       '</ul></div>' +
       '</div>' +
       '<div class="foot-sig">' +
       '<span class="sig">A Luke × Claude build · Minjerribah, Quandamooka Country</span>' +
-      '<span>Legal information, never legal advice · <a href="' + P + 'licence.html">Licence</a> · <a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance" rel="noopener">Source</a></span>' +
+      '<span>Legal information, never legal advice · <a href="' + P + 'licence.html">Licence</a> · <a href="https://github.com/auraofintelligence/australian-law-2012-lukes-relevance" target="_blank" rel="noopener">Source</a></span>' +
       '</div></div>';
   }
 })();

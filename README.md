@@ -21,6 +21,10 @@ This repo publishes that method as a colourful, highly visual site, and designs 
 - **Change the law / Gamify democracy / Cyber republic**: the civic side: the reform ladder inside the rules, democracy as a game with a published rulebook, and the long game of mapping a system worth putting to a vote.
 - **The honesty chip**: legal information, never legal advice, and what "gets it right" has to mean in engineering terms.
 
+## Reference material
+
+`reference/` holds the two 2024-25 deep research briefs behind the engine design, archived as they were written: `building-an-australian-legal-rag-system.md` (the all-Australia statutory blueprint) and `legal-rag-llm-plan-aus-qld-redlands.md` (the Federal / Queensland / Redlands three-tier plan). They are exploration documents, not settled decisions; the live site is the current state of the thinking.
+
 ## The source corpus
 
 The original PDFs live in a local archive folder ("Australian Law 2012 - Lukes Relevance", about 90 MB of official reprints and forms). They are **not committed here**: the site carries a complete manifest instead (`assets/corpus-data.js`) with every filename, size and save-date. If the reprints themselves should ever be published, a GitHub Release is the right vehicle; that call is Luke's.
