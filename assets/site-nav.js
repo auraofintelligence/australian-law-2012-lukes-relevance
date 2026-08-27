@@ -31,7 +31,7 @@
       links: [
         { href: 'pages/the-engine.html', title: 'The legal engine', note: 'The design: from nine statute books to grounded, cited answers.' },
         { href: 'pages/nine-registers.html', title: 'Nine registers', note: 'Where Australian law actually lives, tier by tier.' },
-        { href: 'pages/honesty.html', title: 'The honesty chip', note: 'Not legal advice. What "gets it right" has to mean.' }
+        { href: 'pages/limits.html', title: 'Limits', note: 'Not legal advice. What "gets it right" has to mean.' }
       ]
     },
     {
@@ -147,6 +147,7 @@
       '<li><a href="https://auraofintelligence.github.io/legal-memory-workbench/" target="_blank" rel="noopener">Legal Memory Workbench</a></li>' +
       '<li><a href="https://p4a.xyz/pages/site-map.html" target="_blank" rel="noopener">P4A site map</a></li>' +
       '<li><a href="https://auraofintelligence.github.io/strange-but-true/" target="_blank" rel="noopener">Strange But True</a></li>' +
+      '<li><a href="https://auraofintelligence.github.io/gajra-earth-claude-build/" target="_blank" rel="noopener">GAJRA Earth</a></li>' +
       '<li><a href="https://auraofintelligence.github.io/" target="_blank" rel="noopener">Aura of Intelligence</a></li>' +
       '</ul></div>' +
       '</div>' +

@@ -19,7 +19,7 @@ This repo publishes that method as a colourful, highly visual site, and designs 
 - **The method**: the Relevance Ladder: gather your laws, chomp through them with AI, sort what serves from what bites, plan the change.
 - **The legal engine**: the design for a robot lawyer that never gets tired: nine legislative registers in, grounded and cited answers out. Distilled from two deep research briefs (an all-Australia statutory RAG blueprint, and a tri-jurisdictional Federal/QLD/Redlands plan).
 - **Change the law / Gamify democracy / Cyber republic**: the civic side: the reform ladder inside the rules, democracy as a game with a published rulebook, and the long game of mapping a system worth putting to a vote.
-- **The honesty chip**: legal information, never legal advice, and what "gets it right" has to mean in engineering terms.
+- **Limits**: legal information, never legal advice, and what "gets it right" has to mean in engineering terms.
 
 ## Reference material
 
