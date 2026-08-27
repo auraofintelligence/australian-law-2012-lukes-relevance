@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The honesty chip · Luke's Relevance</title>
+<meta name="description" content="Not legal advice: what this site is and is not, the engineering bar a legal engine would have to clear, and a plain audit of what here is built, live, designed or intended.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-accent="gold" data-page="honesty">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><a class="brand" href="../index.html">Luke's Relevance</a></header>
+<nav class="crumbs" aria-label="Breadcrumb"></nav>
+<main id="main">
+
+  <section class="hero">
+    <p class="kicker">The honesty chip · Luke's Relevance</p>
+    <h1>The disclaimers, written like they matter.</h1>
+    <p class="lede">Most sites bury the fine print. This site is about fine print, so its own gets a whole room: what this site is not, the bar the engine design would have to clear before anyone should trust it, and a line-by-line audit of what here is built and what is still on paper.</p>
+    <p>
+      <span class="stamp">Not legal advice</span>
+      <span class="stamp gold">Check the source</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>Not legal advice</h2>
+    <div class="panel paper">
+      <h3>Read this before you rely on anything here</h3>
+      <p>This site is legal information, method and design. It tells the story of one person's read-through of the law, publishes the method he used, and describes a machine being designed to make that read-through faster. None of it is advice about your situation, and none of it should be treated as advice about anyone's situation.</p>
+      <p>For advice about your situation: a qualified lawyer. Not this site, not any AI assistant, not a forum. A person who is admitted to practise, carries professional obligations to you, and can be held to account if the advice is wrong.</p>
+    </div>
+    <div class="measure">
+      <p>That is not a mumbled formality at the bottom of the page. It is the design constraint the whole site is built around. Information tells you what the law says and where to read it yourself. Advice tells you what to do.</p>
+      <p>This site, the <a href="the-method.html">method</a>, and the <a href="the-engine.html">engine design</a> all stop at the first one, on purpose. The rest of this room explains why the stop is where it is, and what would have to be true before a machine deserved to stand anywhere near the line.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The bar: what "doesn't get things wrong" has to mean</h2>
+    <div class="measure">
+      <p>"The engine wouldn't get things wrong" is not a promise anyone can make with a straight face. It has to be turned into properties you can test. The engine design sets four, and each one comes with the test that would catch a failure.</p>
+      <p>
+        <span class="chip">Grounded</span>
+        <span class="chip">Cited</span>
+        <span class="chip">Current</span>
+        <span class="chip">Checkable</span>
+      </p>
+    </div>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>The bar</th>
+            <th>What it means</th>
+            <th>How it would be tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Grounded</strong></td>
+            <td>Every answer would be assembled only from the retrieved text of the law itself, never from the model's general memory of what the law probably says.</td>
+            <td>Trace each answer back to the sections retrieved for it. Any sentence whose content appears in no retrieved section fails the answer.</td>
+          </tr>
+          <tr>
+            <td><strong>Cited</strong></td>
+            <td>Every claim would name the act and section it came from, down to the subsection where the detail lives.</td>
+            <td>Follow each citation to the named section. A citation that does not exist, or does not say what the answer claims, fails the answer.</td>
+          </tr>
+          <tr>
+            <td><strong>Current</strong></td>
+            <td>Everything would carry an "as at" date: the date the underlying text was last confirmed against the official register. Laws change constantly across nine parliaments, and a stale legal database is worse than none.</td>
+            <td>Compare the stored text against the authorised register as at the shown date. Text that has drifted from the register fails.</td>
+          </tr>
+          <tr>
+            <td><strong>Checkable</strong></td>
+            <td>Every answer would link to the authorised source, the official published version of the law, so a reader can open it and verify without trusting the engine at all.</td>
+            <td>A reader with a browser and no special tools opens the link and finds the cited section. A dead link, or a link to the wrong text, fails.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="measure">
+      <p>On top of the four properties, the design calls for a golden test set: a bank of questions with answers checked by qualified lawyers, run against the engine after every update, with citation accuracy as the headline number, and human review for any high-stakes output. The <a href="the-engine.html">engine room</a> walks through how each layer of the design serves this bar; the <a href="nine-registers.html">nine registers</a> page shows where the authorised sources live.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why the bar sits there</h2>
+    <div class="measure">
+      <p>AI language models invent plausible falsehoods. The industry word is hallucination: an answer that reads confidently, cites something that sounds real, and is wrong. It is not a rare glitch; it is a known behaviour of the technology, and legal text is a place it does real damage, because a made-up section number looks exactly like a real one until you go and check.</p>
+      <p>This is not hypothetical. Australian courts have already dealt with lawyers filing documents that contained AI-invented citations, and in 2025 an Australian lawyer was penalised for it. Trained professionals, with their names on the filings, were caught out by answers that looked right.</p>
+      <p>That is the whole case for the bar above. Grounding and citations are not polish on the engine design; they are the difference between a research tool and a confident liar. An engine that cannot show its section is an engine you cannot use.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The boundary the design does not cross</h2>
+    <div class="measure">
+      <p>There is a second reason the "information, not advice" line is firm, and it is legal, not just careful. Providing legal advice without being qualified is unlawful in Australia. The offence is called unauthorised practice: every state and territory restricts legal practice to people who are qualified, admitted and hold a practising certificate, and the restriction exists to protect the people receiving the advice.</p>
+      <p>So the engine is designed as a research and information tool. It would find the law, quote the law, cite the law, and hand you the link to read the law yourself. It would supplement professional judgement, the way a good library supplements a good lawyer. It would never substitute for it, and nothing in the design points the other way.</p>
+      <p>The same boundary shapes the neighbouring tools. The <a href="workbench-bridge.html">Legal Memory Workbench</a> helps you organise your own side of the table: your facts, obligations and evidence gaps. It does not tell you what to do about them either.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Built, live, designed, intended</h2>
+    <div class="measure">
+      <p>The last honesty job is the site auditing itself. Every claim on these pages falls into one of four states, and here is the full ledger, so you never have to guess which state you are reading about.</p>
+    </div>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th class="num">Status</th>
+            <th>What that status means</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The 2013 read-through</td>
+            <td class="num">Happened</td>
+            <td>A real summer, a real folder of 61 documents, real save-dates. The <a href="filing-cabinet.html">filing cabinet</a> lists every file.</td>
+          </tr>
+          <tr>
+            <td>This site</td>
+            <td class="num">Exists</td>
+            <td>The pages you are reading. Static, public, no accounts, no analytics.</td>
+          </tr>
+          <tr>
+            <td>The Legal Memory Workbench</td>
+            <td class="num">Live</td>
+            <td>A working browser tool at <a href="https://auraofintelligence.github.io/legal-memory-workbench/" rel="noopener">auraofintelligence.github.io</a>. Your files stay with you; nothing is uploaded.</td>
+          </tr>
+          <tr>
+            <td>The Isaacus corpus and embeddings</td>
+            <td class="num">Public, third party</td>
+            <td>The <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-corpus" rel="noopener">Open Australian Legal Corpus</a> and <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-embeddings" rel="noopener">open-australian-legal-embeddings</a> exist publicly and are built by others, not by this project.</td>
+          </tr>
+          <tr>
+            <td>The method</td>
+            <td class="num">Usable today</td>
+            <td>The <a href="the-method.html">Relevance Ladder</a> runs now with any general AI assistant plus the authorised sources. No engine required.</td>
+          </tr>
+          <tr>
+            <td>The legal engine</td>
+            <td class="num">Design</td>
+            <td>A design, not a built product. Everything about it on this site is written in conditional voice because it does not exist yet.</td>
+          </tr>
+          <tr>
+            <td>The cyber republic map</td>
+            <td class="num">Intention</td>
+            <td>A stated aim on the <a href="cyber-republic.html">long game</a> page. Nothing has been mapped; the engine it depends on is still a design.</td>
+          </tr>
+          <tr>
+            <td>The referendum</td>
+            <td class="num">Intention</td>
+            <td>An aim, held to the rules in section 128 of the Constitution. No proposal exists, and none is claimed to.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="measure">
+      <p class="muted small">If a sentence anywhere on this site reads as though a design or an intention already exists, that sentence is wrong and this ledger wins.</p>
+      <p class="muted small">The same rule applies forward: if the engine is ever built, this ledger changes first, and the rest of the site changes to match it.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The verify habit</h2>
+    <div class="panel accent">
+      <p><strong>Nothing on this site, and nothing out of any AI, gets acted on before the primary source is checked.</strong> The primary source is the law itself, in its authorised version on the official register: the <a href="https://www.legislation.gov.au/" rel="noopener">Federal Register of Legislation</a>, the state and territory registers, or the free full texts on <a href="https://www.austlii.edu.au/" rel="noopener">AustLII</a>.</p>
+      <p>That habit is the whole method in one sentence. It is what the 2013 read-through was: checking the primary sources instead of trusting the forums. It is what the engine design automates: every answer arriving with the check already wired in. And it is what stays yours either way, because no tool, this one included, earns a pass from it.</p>
+    </div>
+    <figure class="diagram">
+      <svg viewBox="0 0 760 130" role="img" aria-label="The verify loop in four steps: a claim, its citation to act and section, the authorised source opened and read, then action or a qualified lawyer.">
+        <rect x="8" y="30" width="160" height="60" rx="10" fill="#2a1d3f" stroke="#e0b04f"/>
+        <text x="88" y="55" fill="#ece4f2" font-size="15" text-anchor="middle">A claim</text>
+        <text x="88" y="76" fill="#b7abc9" font-size="12" text-anchor="middle">from any page or AI</text>
+        <path d="M168 60 h24" stroke="#b7abc9" stroke-width="2"/>
+        <path d="M192 60 l-8 -5 v10 z" fill="#b7abc9"/>
+        <rect x="200" y="30" width="160" height="60" rx="10" fill="#2a1d3f" stroke="#e0b04f"/>
+        <text x="280" y="55" fill="#ece4f2" font-size="15" text-anchor="middle">Its citation</text>
+        <text x="280" y="76" fill="#b7abc9" font-size="12" text-anchor="middle">act and section</text>
+        <path d="M360 60 h24" stroke="#b7abc9" stroke-width="2"/>
+        <path d="M384 60 l-8 -5 v10 z" fill="#b7abc9"/>
+        <rect x="392" y="30" width="160" height="60" rx="10" fill="#2a1d3f" stroke="#43c4a8"/>
+        <text x="472" y="55" fill="#ece4f2" font-size="15" text-anchor="middle">The source</text>
+        <text x="472" y="76" fill="#b7abc9" font-size="12" text-anchor="middle">opened and read</text>
+        <path d="M552 60 h24" stroke="#b7abc9" stroke-width="2"/>
+        <path d="M576 60 l-8 -5 v10 z" fill="#b7abc9"/>
+        <rect x="584" y="30" width="168" height="60" rx="10" fill="#2a1d3f" stroke="#e0b04f"/>
+        <text x="668" y="55" fill="#ece4f2" font-size="15" text-anchor="middle">Then act</text>
+        <text x="668" y="76" fill="#b7abc9" font-size="12" text-anchor="middle">or ask a lawyer</text>
+      </svg>
+      <figcaption>The verify loop. No claim skips the third box, whoever or whatever made it.</figcaption>
+    </figure>
+    <div class="measure">
+      <p>You can carry the habit into any AI assistant you already use, today, by setting the terms before you ask your first question. Something like this:</p>
+    </div>
+    <pre class="prompt">I am researching Australian law as legal information, not seeking legal advice.
+Ground rules for every answer you give me in this conversation:
+
+1. Answer only from law text you can actually quote. If you are not certain
+   a section exists, say so instead of guessing.
+2. Cite every claim to its act and section (and subsection where it matters).
+3. State the currency of what you are relying on. If you cannot confirm the
+   law as it stands today, say "unverified: check the register".
+4. For each citation, tell me where to read the official text myself
+   (legislation.gov.au, the state or territory register, or AustLII).
+5. If any part of my question really needs advice about my own situation,
+   say plainly that it needs a qualified lawyer, and stop there.
+
+I will be checking your citations against the authorised sources
+before acting on anything.</pre>
+    <div class="measure">
+      <p class="muted small">The last line is not a threat, it is the method. An assistant that knows its citations will be checked, and a reader who actually checks them, together do by hand roughly what the <a href="the-engine.html">engine design</a> would do by machinery.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The words in this room, in plain terms</h2>
+    <dl class="glossary">
+      <dt>Legal information</dt>
+      <dd>What the law says and where to read it. General, public, and the same for everyone. This site offers only this.</dd>
+      <dt>Legal advice</dt>
+      <dd>What you should do, applied to your particular facts. Only a qualified lawyer should give it, and only a qualified lawyer may.</dd>
+      <dt>Hallucination</dt>
+      <dd>The industry word for an AI answer that is invented but reads as confident and real, such as a citation to a section that does not exist.</dd>
+      <dt>Grounded</dt>
+      <dd>Built only from retrieved source text, never from the model's general memory of what the law probably says.</dd>
+      <dt>Authorised version</dt>
+      <dd>The official published text of a law on its government register, the version you can rely on as accurate.</dd>
+      <dt>Primary source</dt>
+      <dd>The law itself, rather than a summary, an article, a forum post or an AI answer about the law.</dd>
+      <dt>"As at" date</dt>
+      <dd>The date a piece of law text was last confirmed as current. Law changes constantly across nine parliaments, so text without a date is text you cannot trust.</dd>
+      <dt>Unauthorised practice</dt>
+      <dd>Providing legal advice or legal services without being qualified and entitled to. Unlawful in every Australian state and territory.</dd>
+      <dt>Golden test set</dt>
+      <dd>A fixed bank of questions with expert-checked answers, used to measure a system after every change. Part of the engine design's verification layer.</dd>
+    </dl>
+  </section>
+
+  <section class="panel accent">
+    <h2>Where to from here</h2>
+    <p class="measure">The terms this site itself is offered under live on the <a href="../licence.html">licence page</a>: free for people, reserved for corporations, in plain words.</p>
+    <p class="measure">And if this room was your first, the front door is the right next step: <a href="../index.html">the story, the cabinet and the map of every room</a> are all there. From there, the honest order is the site's own order: read <a href="the-method.html">the method</a>, start from <a href="your-relevance.html">your own relevance</a>, and keep this room's habit in your pocket the whole way.</p>
+  </section>
+
+  <div class="next-room"></div>
+</main>
+<footer class="site-foot">
+  <noscript>
+    <p><a href="../index.html">Home</a> · <a href="filing-cabinet.html">The filing cabinet</a> · <a href="the-method.html">The method</a> · <a href="the-engine.html">The legal engine</a> · <a href="nine-registers.html">Nine registers</a> · <a href="your-relevance.html">Your relevance</a> · <a href="sort-bench.html">The sorting bench</a> · <a href="change-the-law.html">Change the law</a> · <a href="gamify-democracy.html">Gamify democracy</a> · <a href="cyber-republic.html">Cyber republic</a> · <a href="workbench-bridge.html">Neighbouring rooms</a> · <a href="honesty.html">The honesty chip</a> · <a href="../licence.html">Licence</a></p>
+  </noscript>
+</footer>
+<script src="../assets/site-nav.js"></script>
+</body>
+</html>

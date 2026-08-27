@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The legal engine · Luke's Relevance</title>
+<meta name="description" content="The design for the robot lawyer: nine statute registers in, grounded and cited answers out, with a human check on anything that matters.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-accent="purple" data-page="the-engine">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><a class="brand" href="../index.html">Luke's Relevance</a></header>
+<nav class="crumbs" aria-label="Breadcrumb"></nav>
+<main id="main">
+
+  <section class="hero">
+    <p class="kicker">The legal engine · Luke's Relevance</p>
+    <h1>A lawyer that never gets tired</h1>
+    <p class="lede">This room holds a design, not a product. It describes a legal engine that would read all nine of Australia's statute books, never fatigue, and be built so every answer can be checked against the exact section it came from. "Doesn't get things wrong" is the bar the engineering has to clear, not a promise being made.</p>
+    <p>
+      <span class="stamp">Design stage</span>
+      <span class="stamp gold">Cited or silent</span>
+      <span class="stamp ok">Human checked</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>The bar to clear</h2>
+    <div class="measure">
+      <p>In 2013 the read-through was done by one person, on paper, over a summer. <a href="the-method.html">The method</a> shows how you can run your own version today with a general AI assistant and the authorised sources. The engine is the third step: a purpose-built system, designed so the checking is not left to luck.</p>
+      <p>The design starts from a hard rule: an answer about the law is only worth having if you can trace it back to the words of the act. So the engine would not be allowed to answer from memory or vibes. It would answer only from sections it has just retrieved, name each one, and show the date the law was current to. Where it cannot find the section, the design calls for it to say so rather than guess.</p>
+      <p>None of this would make it a lawyer. It would be legal information with receipts: a map to the source, never advice about your situation. For advice about your situation, a qualified lawyer. What "getting it right" has to mean in practice is unpacked further in <a href="honesty.html">the honesty chip</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The pipeline, end to end</h2>
+    <p class="measure">Nine parliaments and assemblies publish Australia's statute law, each through its own register; below them sits a council tier of local laws and planning schemes. The design would take all of that in at one end and hand out grounded, cited answers at the other. Every stage below is conditional: this is what the design calls for, not what exists.</p>
+
+    <figure class="diagram">
+      <div class="diagram-scroll">
+      <svg viewBox="0 0 940 640" role="img" aria-label="Pipeline diagram. Inputs: nine statute registers plus the council tier. Stages in order: acquire, parse, chunk by structure, embed, index, retrieve, answer, human check." style="min-width:720px">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#b7abc9"/>
+          </marker>
+        </defs>
+
+        <!-- inputs: nine registers -->
+        <text x="470" y="26" text-anchor="middle" fill="#63aee2" font-size="13" letter-spacing="2">IN: NINE STATUTE REGISTERS</text>
+        <g font-size="13" text-anchor="middle">
+          <rect x="30"  y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="72"  y="63" fill="#ece4f2">Cth</text>
+          <rect x="131" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="173" y="63" fill="#ece4f2">NSW</text>
+          <rect x="232" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="274" y="63" fill="#ece4f2">Vic</text>
+          <rect x="333" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="375" y="63" fill="#ece4f2">Qld</text>
+          <rect x="434" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="476" y="63" fill="#ece4f2">WA</text>
+          <rect x="535" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="577" y="63" fill="#ece4f2">SA</text>
+          <rect x="636" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="678" y="63" fill="#ece4f2">Tas</text>
+          <rect x="737" y="40" width="84" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="779" y="63" fill="#ece4f2">ACT</text>
+          <rect x="838" y="40" width="72" height="36" rx="7" fill="#1f1530" stroke="#63aee2"/><text x="874" y="63" fill="#ece4f2">NT</text>
+        </g>
+        <rect x="280" y="94" width="380" height="34" rx="7" fill="#1f1530" stroke="#e0b04f" stroke-dasharray="5 4"/>
+        <text x="470" y="116" text-anchor="middle" fill="#e0b04f" font-size="12.5">plus the council tier: local laws and planning schemes</text>
+        <line x1="470" y1="128" x2="470" y2="166" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- stage row one -->
+        <g>
+          <rect x="30" y="172" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="130" y="200" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">1 · Acquire</text>
+          <text x="130" y="222" text-anchor="middle" fill="#ece4f2" font-size="11.5">engagement first:</text>
+          <text x="130" y="238" text-anchor="middle" fill="#b7abc9" font-size="11.5">sanctioned access from each</text>
+          <text x="130" y="253" text-anchor="middle" fill="#b7abc9" font-size="11.5">register, not scraping</text>
+
+          <rect x="266" y="172" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="366" y="200" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">2 · Parse</text>
+          <text x="366" y="222" text-anchor="middle" fill="#ece4f2" font-size="11.5">PDFs and register pages</text>
+          <text x="366" y="238" text-anchor="middle" fill="#b7abc9" font-size="11.5">into clean text that keeps</text>
+          <text x="366" y="253" text-anchor="middle" fill="#b7abc9" font-size="11.5">the act's own structure</text>
+
+          <rect x="502" y="172" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="602" y="200" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">3 · Chunk</text>
+          <text x="602" y="222" text-anchor="middle" fill="#ece4f2" font-size="11.5">by part, section, subsection</text>
+          <text x="602" y="238" text-anchor="middle" fill="#b7abc9" font-size="11.5">never arbitrary</text>
+          <text x="602" y="253" text-anchor="middle" fill="#b7abc9" font-size="11.5">fixed-size blocks</text>
+
+          <rect x="738" y="172" width="172" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="824" y="200" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">4 · Embed</text>
+          <text x="824" y="222" text-anchor="middle" fill="#ece4f2" font-size="11.5">with embeddings trained</text>
+          <text x="824" y="238" text-anchor="middle" fill="#b7abc9" font-size="11.5">on Australian</text>
+          <text x="824" y="253" text-anchor="middle" fill="#b7abc9" font-size="11.5">legal text</text>
+        </g>
+        <line x1="230" y1="220" x2="262" y2="220" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+        <line x1="466" y1="220" x2="498" y2="220" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+        <line x1="702" y1="220" x2="734" y2="220" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- turn down to row two -->
+        <path d="M824 268 L824 306" fill="none" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- stage row two, right to left -->
+        <g>
+          <rect x="738" y="312" width="172" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="824" y="340" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">5 · Index</text>
+          <text x="824" y="362" text-anchor="middle" fill="#ece4f2" font-size="11.5">semantic vectors</text>
+          <text x="824" y="378" text-anchor="middle" fill="#b7abc9" font-size="11.5">plus exact keyword,</text>
+          <text x="824" y="393" text-anchor="middle" fill="#b7abc9" font-size="11.5">side by side</text>
+
+          <rect x="502" y="312" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#a97ef5"/>
+          <text x="602" y="340" text-anchor="middle" fill="#a97ef5" font-size="15" font-weight="600">6 · Retrieve</text>
+          <text x="602" y="362" text-anchor="middle" fill="#ece4f2" font-size="11.5">hybrid search, filters by</text>
+          <text x="602" y="378" text-anchor="middle" fill="#b7abc9" font-size="11.5">jurisdiction, act, section</text>
+          <text x="602" y="393" text-anchor="middle" fill="#b7abc9" font-size="11.5">and date, then re-rank</text>
+
+          <rect x="266" y="312" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#43c4a8"/>
+          <text x="366" y="340" text-anchor="middle" fill="#43c4a8" font-size="15" font-weight="600">7 · Answer</text>
+          <text x="366" y="362" text-anchor="middle" fill="#ece4f2" font-size="11.5">only from retrieved sections,</text>
+          <text x="366" y="378" text-anchor="middle" fill="#b7abc9" font-size="11.5">every claim cited,</text>
+          <text x="366" y="393" text-anchor="middle" fill="#b7abc9" font-size="11.5">"as at" date shown</text>
+
+          <rect x="30" y="312" width="200" height="96" rx="10" fill="#2a1d3f" stroke="#e0b04f"/>
+          <text x="130" y="340" text-anchor="middle" fill="#e0b04f" font-size="15" font-weight="600">8 · Human check</text>
+          <text x="130" y="362" text-anchor="middle" fill="#ece4f2" font-size="11.5">expert review for anything</text>
+          <text x="130" y="378" text-anchor="middle" fill="#b7abc9" font-size="11.5">high-stakes, and a standing</text>
+          <text x="130" y="393" text-anchor="middle" fill="#b7abc9" font-size="11.5">golden question set</text>
+        </g>
+        <line x1="738" y1="360" x2="706" y2="360" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+        <line x1="502" y1="360" x2="470" y2="360" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+        <line x1="266" y1="360" x2="234" y2="360" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+
+        <!-- output -->
+        <line x1="130" y1="408" x2="130" y2="446" stroke="#b7abc9" stroke-width="1.5" marker-end="url(#arr)"/>
+        <rect x="30" y="452" width="436" height="76" rx="10" fill="#1f1530" stroke="#43c4a8" stroke-dasharray="5 4"/>
+        <text x="248" y="482" text-anchor="middle" fill="#43c4a8" font-size="14" font-weight="600">OUT: a grounded answer</text>
+        <text x="248" y="503" text-anchor="middle" fill="#b7abc9" font-size="12">every claim tied to an act and section you can open,</text>
+        <text x="248" y="519" text-anchor="middle" fill="#b7abc9" font-size="12">dated, and never dressed up as legal advice</text>
+
+        <text x="30" y="580" fill="#b7abc9" font-size="12">Where a section cannot be retrieved, the design calls for "I cannot find that"</text>
+        <text x="30" y="598" fill="#b7abc9" font-size="12">rather than a confident guess. Silence beats invention.</text>
+      </svg>
+      </div>
+      <figcaption>The designed pipeline. Nine registers and the council tier in; acquire, parse, chunk, embed, index, retrieve, answer, human check; a cited answer out. A design drawing, not a screenshot.</figcaption>
+    </figure>
+
+    <div class="measure">
+      <p>Two stages deserve a plain-words note. <strong>Acquire</strong> is deliberately engagement first: most registers publish no public interface for bulk access, terms of use vary, and Crown copyright applies to reprints, so the honest path is to ask each Parliamentary Counsel's office for sanctioned access rather than scrape around them. <strong>Embed</strong> uses <span class="gloss" title="A way of turning text into lists of numbers so a computer can compare meanings, not just match words.">embeddings</span> (text turned into numbers so meaning can be compared, not just words matched), and embeddings trained on Australian legal text already exist publicly, which matters because Australian statute reads nothing like everyday prose.</p>
+      <p>One scope note the design has to carry: "in force" law means assented principal and amending acts, including ones made but not yet commenced; bills and repealed law sit outside it; and regulations, the subordinate legislation made under acts, are a second layer the design also needs. The full tour of where all this law lives is next door in <a href="nine-registers.html">nine registers</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why structure matters</h2>
+    <div class="measure">
+      <p>Legislation is a tree. An act divides into chapters and parts, parts into sections, sections into subsections and paragraphs, and the meaning hangs off that shape: subsection (3) often only makes sense under the heading of section 12, inside Part 2. Most document systems cut text into fixed-size blocks because it is easy. Do that to an act and you sever a definition from the term it defines, or an exception from the rule it softens.</p>
+      <p>So the design chunks by structure: split at part, section and subsection boundaries, keep each piece whole, and carry its address (act, part, section, date) with it as metadata. The address is what makes citation possible later.</p>
+    </div>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 920 290" role="img" aria-label="Two ways to cut an act. Left: fixed-size blocks slice through the middle of section 12, severing subsection 3 from its heading. Right: structural chunks keep Part 2, section 12 and its subsections together as one whole piece.">
+        <!-- left: fixed-size blocks -->
+        <text x="230" y="30" text-anchor="middle" fill="#e05a4f" font-size="14" font-weight="600">Cut by size</text>
+        <rect x="60" y="46" width="340" height="86" rx="8" fill="#2a1d3f" stroke="#3b2b55"/>
+        <text x="80" y="72" fill="#b7abc9" font-size="12" font-family="monospace">Block 1 (1,000 characters)</text>
+        <text x="80" y="94" fill="#ece4f2" font-size="12">...Part 2, s 12 Meaning of supplier</text>
+        <text x="80" y="112" fill="#ece4f2" font-size="12">(1) ... (2) ... (3) A person is not</text>
+        <line x1="60" y1="140" x2="400" y2="140" stroke="#e05a4f" stroke-width="2" stroke-dasharray="7 5"/>
+        <text x="404" y="144" fill="#e05a4f" font-size="11">the cut</text>
+        <rect x="60" y="148" width="340" height="86" rx="8" fill="#2a1d3f" stroke="#3b2b55"/>
+        <text x="80" y="174" fill="#b7abc9" font-size="12" font-family="monospace">Block 2 (next 1,000)</text>
+        <text x="80" y="196" fill="#ece4f2" font-size="12">a supplier if... [rule now separated</text>
+        <text x="80" y="214" fill="#ece4f2" font-size="12">from its own heading and subject]</text>
+        <text x="60" y="262" fill="#b7abc9" font-size="12">The exception in s 12(3) is split mid-sentence.</text>
+        <text x="60" y="278" fill="#b7abc9" font-size="12">Retrieved alone, it can read as the opposite rule.</text>
+
+        <!-- right: structural chunks -->
+        <text x="690" y="30" text-anchor="middle" fill="#43c4a8" font-size="14" font-weight="600">Cut by structure</text>
+        <rect x="520" y="46" width="340" height="188" rx="8" fill="#2a1d3f" stroke="#43c4a8"/>
+        <text x="540" y="72" fill="#b7abc9" font-size="12" font-family="monospace">Chunk: Act X · Part 2 · s 12</text>
+        <text x="540" y="96" fill="#ece4f2" font-size="12">s 12 Meaning of supplier</text>
+        <text x="556" y="116" fill="#ece4f2" font-size="12">(1) the general rule</text>
+        <text x="556" y="134" fill="#ece4f2" font-size="12">(2) the extension</text>
+        <text x="556" y="152" fill="#ece4f2" font-size="12">(3) the exception, kept whole</text>
+        <text x="540" y="180" fill="#b7abc9" font-size="12" font-family="monospace">metadata: jurisdiction, act,</text>
+        <text x="540" y="196" fill="#b7abc9" font-size="12" font-family="monospace">part, section, "as at" date</text>
+        <text x="540" y="220" fill="#43c4a8" font-size="12">one section, one whole piece, one address</text>
+        <text x="520" y="262" fill="#b7abc9" font-size="12">The section travels with its heading, its context</text>
+        <text x="520" y="278" fill="#b7abc9" font-size="12">and its address, so an answer can cite it exactly.</text>
+      </svg>
+      <figcaption>A worked illustration with an invented section number, not a real act. The point is the shape: fixed-size cuts sever meaning; structural cuts preserve it.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>What already exists, and what is designed</h2>
+    <p class="measure">This page keeps the two piles separate on purpose. Overclaiming is exactly the failure the whole design is built against.</p>
+
+    <div class="panel accent">
+      <h3><span class="stamp ok">Exists</span></h3>
+      <ul>
+        <li>The nine registers themselves, publishing consolidated law: start at the <a href="https://www.legislation.gov.au/" rel="noopener">Federal Register of Legislation</a>, and see <a href="nine-registers.html">nine registers</a> for the full list.</li>
+        <li><a href="https://www.austlii.edu.au/" rel="noopener">AustLII</a>, decades of free public access to Australian law.</li>
+        <li>The Isaacus <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-corpus" rel="noopener">Open Australian Legal Corpus</a> and <a href="https://huggingface.co/datasets/isaacus/open-australian-legal-embeddings" rel="noopener">open-australian-legal-embeddings</a>, an open corpus and embeddings trained on Australian legal text.</li>
+        <li>The <a href="https://auraofintelligence.github.io/legal-memory-workbench/" rel="noopener">Legal Memory Workbench</a>, a live static tool for mapping your own side of the table; see <a href="workbench-bridge.html">neighbouring rooms</a>.</li>
+        <li>The method itself, run by hand: the 2013 read-through happened, and <a href="the-method.html">the method</a> shows how to run yours today.</li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h3><span class="stamp">Designed</span></h3>
+      <p class="measure">Everything else on this page. The acquisition agreements, the parser, the structural chunker, the index, the retrieval layer, the grounded answering, the golden question set, the maintenance loop, the knowledge graph: designed, not built. No part of the engine is running anywhere, and nothing here should be read as if it were.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The audit pattern</h2>
+    <div class="measure">
+      <p>A grounded legal engine would enable one pattern worth naming plainly, in neutral terms. Rules and records are both public. Today they are rarely read against each other, because doing so takes a person weeks per question. An engine that has already parsed the rules would change the cost of looking.</p>
+    </div>
+    <ol class="rungs">
+      <li>
+        <h3>Extract the rules</h3>
+        <p>The engine would pull the checkable requirements out of the law: for example, a threshold above which a contract must go to open tender, or a deadline by which a gift must be declared.</p>
+      </li>
+      <li>
+        <h3>Line up the public records</h3>
+        <p>Tender databases, donation registers, published contracts and disclosures: records that already sit in public, jurisdiction by jurisdiction.</p>
+      </li>
+      <li>
+        <h3>Compare, mechanically</h3>
+        <p>Each record would be checked against the rule that governs it. Most would match. Matching is the expected, boring result.</p>
+      </li>
+      <li>
+        <h3>Where they disagree, look closer</h3>
+        <p>A mismatch is not an accusation; it is a place to look. Some mismatches would be data errors, some lawful exceptions, some worth a question to the body involved. The engine's job would end at the pointing.</p>
+      </li>
+    </ol>
+    <p class="measure">The same pattern, run on your own life instead of public records, is <a href="sort-bench.html">the sorting bench</a>; run toward reform, it feeds <a href="change-the-law.html">change the law</a>.</p>
+  </section>
+
+  <section>
+    <h2>Threads, and time</h2>
+    <h3>Tracing the threads</h3>
+    <div class="measure">
+      <p>The 2013 read worked by following threads: one act defines a term, another borrows it, a third amends them both. The cabinet in <a href="filing-cabinet.html">the filing cabinet</a> is the trail of that thread-following, done by hand. The design's future layer is a <span class="gloss" title="A database of things and the named relationships between them, so connections can be followed like roads on a map.">knowledge graph</span>: a map of acts and sections joined by named links such as <span class="chip">amends</span> <span class="chip">references</span> <span class="chip">defines</span>. It would do mechanically what the summer of 2013 did on paper: start anywhere, follow every thread, and see the web whole. That web, followed far enough, is the raw material of the <a href="cyber-republic.html">cyber republic</a> room.</p>
+    </div>
+    <h3>The maintenance truth</h3>
+    <div class="measure">
+      <p>Laws change constantly, across all nine jurisdictions at once: new acts, amending acts, commencements, repeals, reprints. Any engine that ingests the law once and stops would drift out of date within weeks, and a stale legal database is worse than none, because it answers with yesterday's law in today's confident voice. So the design treats maintenance as part of the machine, not an afterthought: a standing update loop per register, and an "as at" date stamped on every answer so you can see how fresh the law behind it is. Like a use-by date on milk: the carton does not stop you drinking it, it just makes sure you know.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The bar, as a ledger</h2>
+    <p class="measure">"Doesn't get things wrong" only means something once it is broken into parts you can test. Here is the bar the design sets, and how each part would be checked before anyone should trust it.</p>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>The bar</th>
+            <th>What it means</th>
+            <th>How it would be tested</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Grounded</strong></td>
+            <td>Every answer built only from retrieved sections of the law, never from the model's general memory. No section found, no answer given.</td>
+            <td>A golden question set: questions with expert-checked answers, run against the engine on every change, with failures blocking release.</td>
+          </tr>
+          <tr>
+            <td><strong>Cited</strong></td>
+            <td>Every claim tied to a named act and section, so the reader can open the source and read the words themselves.</td>
+            <td>Citation accuracy measured against the source texts, with a near-perfect target; a wrong citation counts as a failure, not a rounding error.</td>
+          </tr>
+          <tr>
+            <td><strong>Current</strong></td>
+            <td>Answers drawn from in-force law, with the "as at" date shown, and made-but-uncommenced changes flagged.</td>
+            <td>The update loop monitored per register; the shown date checked against the register's own consolidation date.</td>
+          </tr>
+          <tr>
+            <td><strong>Checkable</strong></td>
+            <td>High-stakes answers routed to human review before anyone relies on them, and every answer traceable end to end.</td>
+            <td>Human review as a designed stage of the pipeline, not a disclaimer; reviewers able to follow any answer back through retrieval to the source section.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel paper">
+      <h3>Why the bar is set this high</h3>
+      <p>Australian courts have already dealt with lawyers filing citations invented by AI tools, and in 2025 an Australian lawyer was penalised for exactly that. The failure mode is not hypothetical; it has a case file. That is why grounding and citation are non-negotiable in this design, and why the engine would rather say "I cannot find that" than produce a confident sentence with no section behind it. The full engineering honesty ledger lives in <a href="honesty.html">the honesty chip</a>.</p>
+    </div>
+  </section>
+
+  <section class="panel accent">
+    <h2>Where to next</h2>
+    <p class="measure">The engine's raw material comes first: <a href="nine-registers.html">nine registers</a> walks the actual shelves, Commonwealth to council, where Australian law lives today. And before trusting any machine with the law, read <a href="honesty.html">the honesty chip</a>: what "gets it right" has to mean, and what this site does and does not claim.</p>
+  </section>
+
+  <div class="next-room"></div>
+</main>
+<footer class="site-foot">
+  <noscript>
+    <p><a href="../index.html">Home</a> · <a href="filing-cabinet.html">The filing cabinet</a> · <a href="the-method.html">The method</a> · <a href="the-engine.html">The legal engine</a> · <a href="nine-registers.html">Nine registers</a> · <a href="your-relevance.html">Your relevance</a> · <a href="sort-bench.html">The sorting bench</a> · <a href="change-the-law.html">Change the law</a> · <a href="gamify-democracy.html">Gamify democracy</a> · <a href="cyber-republic.html">Cyber republic</a> · <a href="workbench-bridge.html">Neighbouring rooms</a> · <a href="honesty.html">The honesty chip</a> · <a href="../licence.html">Licence</a></p>
+  </noscript>
+</footer>
+<script src="../assets/site-nav.js"></script>
+</body>
+</html>

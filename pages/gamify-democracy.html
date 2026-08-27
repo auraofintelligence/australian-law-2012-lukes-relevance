@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gamify democracy · Luke's Relevance</title>
+<meta name="description" content="Democracy is already a game: law is the rules, elections are the turns, budgets are the score. What it lacks is a readable rulebook, a fair tutorial and visible feedback; this room borrows the fixes from good game design.">
+<link rel="stylesheet" href="../assets/styles.css">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body data-accent="lemon" data-page="gamify-democracy">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><a class="brand" href="../index.html">Luke's Relevance</a></header>
+<nav class="crumbs" aria-label="Breadcrumb"></nav>
+<main id="main">
+
+  <section class="hero">
+    <p class="kicker">Gamify democracy · Luke's Relevance</p>
+    <h1>Democracy is already a game.<br>The rulebook is just hard to read.</h1>
+    <p class="lede">Law is the rules. Elections are the turns. Budgets are the score. Every one of us is a player, whether we picked up the controller or not. The game is real; what it lacks is what a decent game ships with: a readable rulebook, a fair tutorial, and a way to see what your move actually did.</p>
+    <p>
+      <span class="chip">Rules: the law</span>
+      <span class="chip">Turns: elections and submissions</span>
+      <span class="chip">Score: the budget</span>
+      <span class="chip">Players: all of us</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>The game you are already in</h2>
+    <div class="measure">
+      <p>Take the frame seriously for a moment, because it holds up. The rules are written down: acts, regulations and local laws, kept in the <a href="nine-registers.html">nine registers</a> plus the council tier underneath. The turns come around on a schedule: elections, and between them the quieter turns most players skip, like consultations, petitions and committee submissions. The score is published every year as a budget: what got funded tells you what the table valued. And the player list is the electoral roll, plus everyone not yet on it.</p>
+      <p>So the game exists. The problem is how it treats its players. The rulebook is technically public but practically unreadable: it is split across nine websites, written in drafting language, and updated constantly. There is no tutorial: school civics tends to hand you the org chart of parliament, not the moves you can make from your own kitchen table. And the interface is hostile: forms that assume you already know the answer, deadlines that arrive before help does, and a wrong move that can cost you a fee while a right one earns you silence.</p>
+      <p>A studio that shipped a game in this state would patch it. This room is about what the patch would contain.</p>
+    </div>
+    <div class="analogy">
+      <span class="big">Thousands</span>
+      <span class="pic">of acts in force across nine parliaments, with no single official count published.
+        <span class="muted">Imagine a board game whose box does not say how many pages the rules run to, because nobody has tallied them.</span></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>What good design would hand every player</h2>
+    <p class="measure">None of the below is exotic. Each one is standard craft in games people happily play for thousands of hours. Applied to civics, most of it is still a design rather than a build, so this list speaks in "would".</p>
+    <ol class="rungs">
+      <li>
+        <h3>A visible rulebook</h3>
+        <p>The nine registers already publish every act. Published is not the same as readable. A well-designed civic game would render the rules that touch your situation in plain words, with the exact section one click away so you can check the source yourself. That renderer is what <a href="the-engine.html">the legal engine</a> is being designed to be. Until it exists, <a href="the-method.html">the method</a> is the manual version: legal information you assemble yourself, never legal advice.</p>
+      </li>
+      <li>
+        <h3>Wayfinding</h3>
+        <p>Breadcrumbs, signposts, save points. A well-made game keeps a way back in view. The civic equivalent would be interfaces where you can see where you are in a process, what the next step is, and where you can put a form down mid-quest and resume it later with your place kept, instead of starting again because a session expired.</p>
+      </li>
+      <li>
+        <h3>Fair onboarding</h3>
+        <p>A new player should be able to learn by playing, not by being punished. Games do this with low-stakes early levels. Civic life already has some: signing an <a href="https://www.aph.gov.au/petitions" rel="noopener">e-petition to federal parliament</a> or a <a href="https://www.parliament.qld.gov.au/Work-of-the-Assembly/Petitions" rel="noopener">Queensland one</a> costs nothing and teaches you the shape of a turn. A designed onboarding would sequence those first quests deliberately instead of leaving new players to find them by accident.</p>
+      </li>
+      <li>
+        <h3>Feedback</h3>
+        <p>In a good game, a move gets a response: a sound, a score change, a door opening. In civic life you can send a submission and hear nothing for months, which teaches players the worst possible lesson, that moves do not matter. Federal parliament and every state parliament accept petitions and submissions from anyone; a designed feedback layer would show you where yours went, who read it, and what happened next.</p>
+      </li>
+      <li>
+        <h3>Co-op play</h3>
+        <p>The current game quietly rewards teams that can pay full-time professional players to take their turns for them. A better design would reward teaming up directly: the community group, the club, the association, where solo players pool knowledge, split the reading and take turns together. Co-op is not a loophole; parliaments listen to organised groups because organising is itself evidence that people care.</p>
+      </li>
+    </ol>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 738 200" role="img" aria-label="The civic game loop: learn a rule, play a turn, see the result, team up, change the rule, then play again knowing more than last time.">
+        <defs>
+          <marker id="loop-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#ecd05e"/>
+          </marker>
+        </defs>
+        <rect x="6" y="36" width="126" height="54" rx="10" fill="#2a1d3f" stroke="#ecd05e" stroke-width="1.5"/>
+        <text x="69" y="68" text-anchor="middle" fill="#ece4f2" font-size="13" font-family="system-ui, sans-serif">Learn a rule</text>
+        <rect x="156" y="36" width="126" height="54" rx="10" fill="#2a1d3f" stroke="#ecd05e" stroke-width="1.5"/>
+        <text x="219" y="68" text-anchor="middle" fill="#ece4f2" font-size="13" font-family="system-ui, sans-serif">Play a turn</text>
+        <rect x="306" y="36" width="126" height="54" rx="10" fill="#2a1d3f" stroke="#ecd05e" stroke-width="1.5"/>
+        <text x="369" y="68" text-anchor="middle" fill="#ece4f2" font-size="13" font-family="system-ui, sans-serif">See the result</text>
+        <rect x="456" y="36" width="126" height="54" rx="10" fill="#2a1d3f" stroke="#ecd05e" stroke-width="1.5"/>
+        <text x="519" y="68" text-anchor="middle" fill="#ece4f2" font-size="13" font-family="system-ui, sans-serif">Team up</text>
+        <rect x="606" y="36" width="126" height="54" rx="10" fill="#2a1d3f" stroke="#ecd05e" stroke-width="1.5"/>
+        <text x="669" y="68" text-anchor="middle" fill="#ece4f2" font-size="13" font-family="system-ui, sans-serif">Change the rule</text>
+        <line x1="132" y1="63" x2="152" y2="63" stroke="#ecd05e" stroke-width="2" marker-end="url(#loop-arrow)"/>
+        <line x1="282" y1="63" x2="302" y2="63" stroke="#ecd05e" stroke-width="2" marker-end="url(#loop-arrow)"/>
+        <line x1="432" y1="63" x2="452" y2="63" stroke="#ecd05e" stroke-width="2" marker-end="url(#loop-arrow)"/>
+        <line x1="582" y1="63" x2="602" y2="63" stroke="#ecd05e" stroke-width="2" marker-end="url(#loop-arrow)"/>
+        <path d="M 669 90 V 150 H 69 V 98" fill="none" stroke="#ecd05e" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#loop-arrow)"/>
+        <text x="369" y="172" text-anchor="middle" fill="#b7abc9" font-size="13" font-family="system-ui, sans-serif">play again, knowing more than last time</text>
+      </svg>
+      <figcaption>The civic game loop. The interface for this loop is a design; the moves themselves exist today as forms, submissions and petitions, and <a href="change-the-law.html">the reform ladder</a> walks them rung by rung.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The translation table</h2>
+    <p class="measure">If you have ever finished a video game, you already hold most of the skills this site asks for. Here is the dictionary between the two worlds.</p>
+    <div class="ledger-wrap">
+      <table class="ledger">
+        <thead>
+          <tr>
+            <th>In the game</th>
+            <th>In civic life</th>
+            <th>The move, plainly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quest</td>
+            <td>The form</td>
+            <td>The basic unit of play. One form, filled properly and lodged on time, moves a real piece on a real board.</td>
+          </tr>
+          <tr>
+            <td>Side quest</td>
+            <td>The FOI request</td>
+            <td>A freedom of information request: the form that asks a government body to show you the documents it holds. Optional, often rewarding, and it opens up the map.</td>
+          </tr>
+          <tr>
+            <td>Speedrun</td>
+            <td>Overcompliance</td>
+            <td>A speedrun is finishing a game fast by knowing its rules better than its makers expected. Overcompliance is the civic version: meet every rule more fully than it asks, so the system has nothing to hold against you and you keep the moral high ground while you work to change it.</td>
+          </tr>
+          <tr>
+            <td>Guild</td>
+            <td>The community group or club</td>
+            <td>Where solo players pool knowledge, split the reading and take turns together. One of the oldest multiplayer technologies going.</td>
+          </tr>
+          <tr>
+            <td>Ledger</td>
+            <td>The credibility record</td>
+            <td>A running public record of who showed up and what they delivered. As a design, it would let trust be earned in the open instead of asserted.</td>
+          </tr>
+          <tr>
+            <td>Boss fight</td>
+            <td>The committee hearing</td>
+            <td>A public session where a parliamentary committee hears from people about an inquiry. Billed as the terrifying end-of-level encounter; in practice it is closer to a conversation with people who have read your submission and want to understand it.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Try it on one rule</h2>
+    <div class="measure">
+      <p>You do not need to wait for anything to be built to play the rulebook this way. Any general AI assistant can help you read one rule as a rulebook entry today, provided you keep it on a leash: official source in, section numbers out, and no guessing. Pick one act that touches your own life (<a href="your-relevance.html">your relevance</a> maps the usual suspects), copy a section from the official register, and paste it in with this.</p>
+    </div>
+    <pre class="prompt">You are helping me read one Australian law the way a good game
+rulebook explains a rule. I will paste a section I copied from an
+official register (legislation.gov.au or my state or territory
+register).
+
+Rewrite it as a rulebook entry with four parts:
+1. The rule, in one plain sentence.
+2. Who it applies to.
+3. What move it allows, requires or blocks.
+4. What happens if the rule is breached.
+
+Cite the section and subsection number for every claim so I can
+check it against the source myself. If any part of the section is
+ambiguous or depends on other provisions, say so plainly instead
+of guessing.
+
+This is legal information to help me read the source. It is not
+legal advice, and I will treat it as a map, not a ruling.</pre>
+    <p class="measure muted small">The same discipline scales up: grounded in the source, cited to the section, honest about uncertainty. That is the bar <a href="honesty.html">the honesty chip</a> sets for the engine design, and it applies just as well to a person with a chatbot at the kitchen table. For advice about your own situation, a qualified lawyer.</p>
+  </section>
+
+  <section>
+    <h2>The 2014 detour</h2>
+    <div class="panel paper">
+      <p><em>In Luke's words.</em></p>
+      <p>"In 2014 I enrolled in a game design course in Brisbane. I was not there to make games for fun. I had read the law the summer before, and I wanted to learn the craft of the people who make complicated rule systems learnable, because that is exactly what democracy needs. I went in to learn how to gamify democracy.</p>
+      <p>The course had other plans. The assessment work wanted war game components: combat, conflict, battle mechanics. I wanted rulebooks, tutorials and co-op. We were not making the same thing. The lesson stayed; the course did not."</p>
+    </div>
+    <p class="measure muted">Twelve years on, the lesson reads the same. The craft of game design belongs in civics, and it is a craft you learn to serve players, not to defeat them.</p>
+  </section>
+
+  <section>
+    <h2>What this is not</h2>
+    <div class="panel accent">
+      <p><strong>Not points for votes.</strong> Nothing here proposes rewarding people for voting a particular way, and nothing here proposes a score attached to a citizen.</p>
+      <p><strong>Not nudging.</strong> Nudging is design that steers your choices without telling you it is doing so. That is the opposite of this room. A hidden mechanic is a hidden mechanic whether it wears a lab coat or a lobbyist's suit.</p>
+      <p><strong>Not manipulation.</strong> The frame is not a trick to make civics addictive. It is a standard for how civics should treat the people inside it.</p>
+      <p class="measure">What it is, in one word, is legibility: publishing the rulebook in a form players can actually read, and drawing the map so they can see where they stand. A game you can see is a game you can consent to. A game you cannot see is just something happening to you.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The rulebook renderer and the tutorial level</h2>
+    <div class="measure">
+      <p>Two pieces make the frame practical. The first is the rulebook renderer: <a href="the-engine.html">the legal engine</a>, which is a design rather than a product, would read the nine statute books and hand any player the rules that touch their situation, in plain words, with every claim cited back to the exact section. Legal information with its sources showing, never legal advice; for advice about your own situation, a qualified lawyer.</p>
+      <p>The second is the tutorial level, and it already exists next door. The Twinkle series on the <a href="https://p4a.xyz/pages/site-map.html" rel="noopener">P4A workbench</a> is a set of short film seeds built around one loop: film the gripe, then fill the form that matches it. It teaches the first quest of the civic game by having you play it, which is exactly how a good tutorial works.</p>
+    </div>
+    <blockquote>
+      "Don't throw a fit, mate, throw a Form!"
+      <cite>Don't Throw A Brick (Fill A Form), i C. infinity, 2025</cite>
+    </blockquote>
+    <p>
+      <span class="stamp gold">Rulebook: publish</span>
+      <span class="stamp ok">Tutorial: play</span>
+    </p>
+  </section>
+
+  <section>
+    <h2>Pick your first quest</h2>
+    <p class="measure">A player list starts with one name; a save file starts empty. These four quests are low-stakes, cost nothing but time, and each one teaches you a different move.</p>
+    <div class="folder-grid">
+      <a class="folder hue-lemon" href="https://www.aph.gov.au/petitions" rel="noopener">
+        <span class="folder-num">Quest 1</span>
+        <h3>Sign an e-petition</h3>
+        <p>The smallest legal move on the board. Federal parliament runs its own e-petition system, Queensland runs one too, and every state parliament accepts petitions from anyone.</p>
+      </a>
+      <a class="folder hue-sky" href="your-relevance.html">
+        <span class="folder-num">Quest 2</span>
+        <h3>Find your acts</h3>
+        <p>Map the handful of laws that actually touch your wallet, lease, payslip and letterbox. Relevance first; the whole statute book can wait.</p>
+      </a>
+      <a class="folder hue-coral" href="sort-bench.html">
+        <span class="folder-num">Quest 3</span>
+        <h3>Sort one act</h3>
+        <p>Read one act with help and mark what serves you, what bites, what looks broken and what is missing. Your sort, saved in your own words.</p>
+      </a>
+      <a class="folder hue-stamp" href="change-the-law.html">
+        <span class="folder-num">Quest 4</span>
+        <h3>Climb the ladder</h3>
+        <p>Turn one gripe from your sort into a form, a submission or a letter to your member. The reform ladder shows every rung above.</p>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Terms used in this room</h2>
+    <dl class="glossary">
+      <dt>Committee submission</dt>
+      <dd>A written piece of evidence anyone may send to a parliamentary committee while it inquires into a topic. No qualification needed; a clear, honest account of your own experience counts.</dd>
+      <dt>Consultation</dt>
+      <dd>A period when a government body publicly asks for views before making or changing a rule. One of the quiet turns between elections.</dd>
+      <dt>E-petition</dt>
+      <dd>A petition to a parliament that is signed online through the parliament's own website, rather than on paper.</dd>
+      <dt>FOI request</dt>
+      <dd>A request under freedom of information law, which asks a government body to show you documents it holds. The federal version runs under the Freedom of Information Act 1982, one of the acts in <a href="filing-cabinet.html">the filing cabinet</a>.</dd>
+      <dt>Legibility</dt>
+      <dd>The quality of being readable and seeable. In this room: rules published in a form players can actually understand, with the map of the game drawn openly.</dd>
+      <dt>Nudging</dt>
+      <dd>Design that steers people's choices without telling them it is doing so. This room treats it as a hidden mechanic, which is the thing being argued against.</dd>
+      <dt>Overcompliance</dt>
+      <dd>Meeting every rule more fully than the rule asks. The stance chosen in 2013 and carried through this whole site: know the rules better than the people administering them, meet them all, and change them from inside.</dd>
+    </dl>
+  </section>
+
+  <section class="panel accent">
+    <h2>Where this hands over</h2>
+    <p class="measure">Follow the frame to its end and a bigger question appears. If the rulebook were readable and the map drawn, players could do more than win turns inside the current rules; they could look at the whole game and ask what a better one would be, and whether Australians would vote for it under the rules the Constitution already provides. That question has its own room: <a href="cyber-republic.html">the cyber republic</a>.</p>
+  </section>
+
+  <div class="next-room"></div>
+</main>
+<footer class="site-foot">
+  <noscript>
+    <p><a href="../index.html">Home</a> · <a href="filing-cabinet.html">The filing cabinet</a> · <a href="the-method.html">The method</a> · <a href="the-engine.html">The legal engine</a> · <a href="nine-registers.html">Nine registers</a> · <a href="your-relevance.html">Your relevance</a> · <a href="sort-bench.html">The sorting bench</a> · <a href="change-the-law.html">Change the law</a> · <a href="gamify-democracy.html">Gamify democracy</a> · <a href="cyber-republic.html">Cyber republic</a> · <a href="workbench-bridge.html">Neighbouring rooms</a> · <a href="honesty.html">The honesty chip</a> · <a href="../licence.html">Licence</a></p>
+  </noscript>
+</footer>
+<script src="../assets/site-nav.js"></script>
+</body>
+</html>
