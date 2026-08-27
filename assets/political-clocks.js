@@ -33,7 +33,7 @@
 
   // The source files use dashes this site does not.
   const plain = text => String(text)
-    .replace(/[—–]/g, ':')
+    .replace(/[\u2014\u2013]/g, ':')
     .replace(/\s*:\s*:/g, ':');
 
   const row = (name, when, note, state) => {
