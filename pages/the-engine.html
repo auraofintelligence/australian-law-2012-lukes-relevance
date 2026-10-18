@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The legal engine · Luke's Relevance</title>
-<meta name="description" content="The design for the robot lawyer: nine statute registers in, grounded and cited answers out, with a human check on anything that matters.">
+<meta name="description" content="The Australian Legal Engine prototype parses and indexes historical Australian legislation; current national coverage and maintenance remain development work.">
 <link rel="canonical" href="https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/pages/the-engine.html">
 <meta name="theme-color" content="#160f20">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Luke's Relevance · Australian Law 2012">
 <meta property="og:title" content="The legal engine · Luke's Relevance">
-<meta property="og:description" content="The design for the robot lawyer: nine statute registers in, grounded and cited answers out, with a human check on anything that matters.">
+<meta property="og:description" content="The Australian Legal Engine prototype parses and indexes historical Australian legislation; current national coverage and maintenance remain development work.">
 <meta property="og:url" content="https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/pages/the-engine.html">
 <link rel="stylesheet" href="../assets/styles.css">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
@@ -24,7 +24,7 @@
   <section class="hero">
     <p class="kicker">The legal engine · Luke's Relevance</p>
     <h1>The robot lawyer, on paper</h1>
-    <p class="lede">This room holds the design for a legal engine that would read all nine of Australia's statute books without tiring the way a person does, built so every answer can be checked against the exact section it came from. "Doesn't get things wrong" is the bar the engineering has to clear, not a promise being made. The first working parts are now <a href="https://github.com/auraofintelligence/australian-legal-engine" target="_blank" rel="noopener">public code</a>; most of what follows is still a drawing.</p>
+    <p class="lede">The <a href="https://github.com/auraofintelligence/australian-legal-engine" target="_blank" rel="noopener">Australian Legal Engine</a> is a working prototype built around the historical 2012 collection. It parses Acts, retrieves provisions and traces references. The wider goal is a current, maintained legal research system across all nine Australian jurisdictions, with the source and date visible for every result.</p>
     <p>
       <span class="stamp ok">First parts built</span>
       <span class="stamp gold">Cited or silent</span>
@@ -215,12 +215,12 @@
     <div class="panel accent">
       <h3><span class="stamp ok">Built, and running</span></h3>
       <p class="measure">The first working parts of the engine are now code you can read and run: <a href="https://github.com/auraofintelligence/australian-legal-engine" target="_blank" rel="noopener">australian-legal-engine</a>. It reads acts you already hold, rebuilds the tree the drafter wrote, indexes it offline in a plain file you own, and answers a question by handing back the provisions themselves, quoted exactly, addressed precisely, and dated to the source. It makes no network calls and needs no account, key or subscription.</p>
-      <p class="measure">Stages 2 to 7 of the pipeline above exist: parse, chunk by structure, index, retrieve, answer, and a check step that prints what the index cannot support. Indexing three acts from the 2012 cabinet produced 6,756 addressable provisions. The rule the code holds to is the one this page argues for: it retrieves and cites, and it never writes prose about the law. Where a question needs plain language, the engine writes a prompt that hands the retrieved provisions to an assistant and forbids it from naming any section that is not in front of it.</p>
+      <p class="measure">Stages 2 to 7 of the pipeline above exist: parse, chunk by structure, index, retrieve, answer, and a check step that prints what the index cannot support. Testing against the full original cabinet indexed about 101,370 provisions from 41 Acts. The rule the code holds to is the one this page argues for: it retrieves and cites, and it never writes prose about the law. Where a question needs plain language, the engine writes a prompt that hands the retrieved provisions to an assistant and forbids it from naming any section that is not in front of it.</p>
     </div>
 
     <div class="panel">
       <h3><span class="stamp">Still designed only</span></h3>
-      <p class="measure">The acquisition agreements with each Parliamentary Counsel's office, semantic search using embeddings trained on Australian legal text, the knowledge graph of amendments and cross-references, amendment awareness beyond a compilation's printed date, and the maintenance loop across nine registers. The engine also does no fetching of its own by design, so what it knows is whatever you have indexed.</p>
+      <p class="measure">Automated acquisition of current legislation, amendment and commencement tracking, reliable comparison of versions, broader semantic search and maintenance across nine registers remain to be developed. Cross-references within indexed documents are already traced by the prototype. It does not fetch or update legislation by itself.</p>
     </div>
   </section>
 
