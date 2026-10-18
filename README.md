@@ -11,14 +11,14 @@
 
 **Public site: https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/**
 
-In the summer of 2012 to 2013, Luke pulled every law and every piece of fine print that touched his own life into one folder and read the lot, cover to cover: 61 documents, from a two-page ATO form to all five volumes of the Corporations Act (saved on Christmas Day 2012). Reading it killed the urge to opt out and replaced it with a better plan: overcomply, and transform the system from within.
+In the summer of 2012 to 2013, Luke searched his filing cabinet, licences and other available fine print, following legal references into a collection of 61 documents. The reading prompted a shift from opting out to understanding the rules and exploring change from within.
 
 This repo publishes that method as a colourful, highly visual site, and designs the machine that lets anyone replicate the read-through in days instead of a summer:
 
 - **The filing cabinet**: the full 2012 corpus as a sortable ledger (every file, size and save-date is real, taken straight from the folder).
 - **The method**: the Relevance Ladder: gather your laws, chomp through them with AI, sort what serves from what bites, plan the change.
-- **The legal engine**: the design for a robot lawyer that never gets tired: nine legislative registers in, grounded and cited answers out. Distilled from two deep research briefs (an all-Australia statutory RAG blueprint, and a tri-jurisdictional Federal/QLD/Redlands plan).
-- **Change the law / Gamify democracy / Cyber republic**: the civic side: the reform ladder inside the rules, democracy as a game with a published rulebook, and the long game of mapping a system worth putting to a vote.
+- **The legal engine**: a linked, unfinished [prototype](https://github.com/auraofintelligence/australian-legal-engine) that parses, indexes and retrieves provisions from already-held documents, demonstrated with the historical cabinet. Current-law acquisition, version tracking and maintained national coverage remain future work.
+- **Change the law / Gamify democracy / Cyber republic**: a bridge to [P4A](https://p4a.xyz/), building a grassroots movement to transform Australia’s political system through a referendum and establish the world’s first cyber republic by the end of 2031, then demonstrate the completed system at the Brisbane 2032 Olympics.
 - **Limits**: legal information, never legal advice, and what "gets it right" has to mean in engineering terms.
 
 ## Reference material
