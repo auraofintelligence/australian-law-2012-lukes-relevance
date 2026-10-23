@@ -37,6 +37,14 @@ No build step. Open `index.html` in a browser, or:
 python -m http.server 4212 --bind 127.0.0.1
 ```
 
+## Reader questionnaire, October 2026
+
+[Your relevance](https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/pages/your-relevance.html) now starts with the reader's circumstances: twelve optional sections, multiple activity locations, conditional follow-ups and an editable Markdown research brief with copy/download. Saving is explicitly opt-in on the device and clearable. The form does not retrieve laws, make an exhaustive legal determination, send answers to AI or create a P4A membership.
+
+The original history remains in the cabinet and method pages. See [duplication findings, official routing research and verification](docs/your-relevance.md). This questionnaire was added by Luke Nathan Hayes with Codex assistance; the original build's lineage and licence remain unchanged.
+
+Run its source/export checks with `node --test tests/relevance.test.mjs`. Browser verification uses `node tests/relevance-browser.mjs` with Playwright and an installed Edge browser. There is no build step or application dependency added to the public page.
+
 ## Neighbouring rooms
 
 - **Legal Memory Workbench**: prepare AI-ready markdown files about your own legal surface: https://auraofintelligence.github.io/legal-memory-workbench/

@@ -38,7 +38,7 @@
       id: 'yourlaw', num: '03', label: 'Your law',
       blurb: 'Relevance-first: start from your own wallet, not from A.',
       links: [
-        { href: 'pages/your-relevance.html', title: 'Your relevance', note: 'Life domains mapped to the acts that touch them.' },
+        { href: 'pages/your-relevance.html', title: 'Your relevance', note: 'Your circumstances, questions and personal law research brief.' },
         { href: 'pages/sort-bench.html', title: 'The sorting bench', note: 'Serves, bites, broken, missing. Dials, not verdicts.' }
       ]
     },
